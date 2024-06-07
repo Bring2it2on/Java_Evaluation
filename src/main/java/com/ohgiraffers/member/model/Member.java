@@ -1,6 +1,6 @@
 package com.ohgiraffers.member.model;
 
-public class Member {
+public class Member implements Buyable {
     private String name;
     private String grade;
     private int point;
@@ -35,8 +35,12 @@ public class Member {
         this.point = point;
     }
 
-    public double calculateInterest() {;
+    public double calculateInterest() {
         return point;
     }
 
+    @Override
+    public int buy(int price) {
+        return 0;
+    }
 }
